@@ -1,0 +1,29 @@
+# Release - Calls Org-Level Reusable Workflow
+# This is a lightweight caller workflow that invokes the organization's
+# shared release workflow with SLSA provenance and signed artifacts.
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag (e.g., v1.0.0)'
+        required: true
+        type: string
+
+jobs:
+  release:
+    name: Create Release
+    uses: yourusername/.github/.github/workflows/python-release.yml@main
+    with:
+      python-version: '3.12'
+      tag: ${{ github.event.inputs.tag || github.ref_name }}
+
+permissions:
+  contents: write
+  packages: write
+  id-token: write  # Required for SLSA provenance
+  attestations: write

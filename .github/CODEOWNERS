@@ -1,0 +1,37 @@
+# CODEOWNERS for My Python Project
+# This file defines code ownership for automated review assignment
+# and branch protection enforcement.
+#
+# Format: path/pattern @github-username or @organization/team
+# Documentation: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for all files
+*                          @yourusername
+
+# Documentation
+/docs/**                   @yourusername
+*.md                       @yourusername
+
+# GitHub workflows and configuration
+/.github/workflows/**      @yourusername
+/.github/**                @yourusername
+
+# Source code
+/src/**                    @yourusername
+
+# Tests
+/tests/**                  @yourusername
+
+# Configuration files
+pyproject.toml             @yourusername
+uv.lock                    @yourusername
+.pre-commit-config.yaml    @yourusername
+mkdocs.yml                 @yourusername
+
+# Security and compliance
+LICENSE                    @yourusername
+
+# CI/CD and tooling
+/scripts/**                @yourusername
+/tools/**                  @yourusername
+noxfile.py                 @yourusername
