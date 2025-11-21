@@ -1,2 +1,1 @@
 """Financial utilities module."""
-

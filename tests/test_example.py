@@ -153,6 +153,8 @@ class TestCLI:
     - Version option
     - Command invocation
     - Help text
+    - Debug mode
+    - Error handling
     """
 
     @pytest.mark.unit
@@ -178,6 +180,142 @@ class TestCLI:
         # Check that hello command exists
         assert cli is not None
         # Command registration happens at module level
+
+    @pytest.mark.unit
+    def test_cli_hello_command_default(self) -> None:
+        """Verify hello command with default name.
+
+        Tests that hello command outputs correct greeting with default name.
+        """
+        from click.testing import CliRunner
+
+        from my_python_project.cli import cli
+
+        runner = CliRunner()
+        result = runner.invoke(cli, ["hello"])
+
+        assert result.exit_code == 0
+        assert "Hello, World!" in result.output
+
+    @pytest.mark.unit
+    def test_cli_hello_command_custom_name(self) -> None:
+        """Verify hello command with custom name.
+
+        Tests that hello command accepts and uses custom name parameter.
+        """
+        from click.testing import CliRunner
+
+        from my_python_project.cli import cli
+
+        runner = CliRunner()
+        result = runner.invoke(cli, ["hello", "--name", "Alice"])
+
+        assert result.exit_code == 0
+        assert "Hello, Alice!" in result.output
+
+    @pytest.mark.unit
+    def test_cli_hello_command_short_option(self) -> None:
+        """Verify hello command with short option -n.
+
+        Tests that hello command accepts short form of name option.
+        """
+        from click.testing import CliRunner
+
+        from my_python_project.cli import cli
+
+        runner = CliRunner()
+        result = runner.invoke(cli, ["hello", "-n", "Bob"])
+
+        assert result.exit_code == 0
+        assert "Hello, Bob!" in result.output
+
+    @pytest.mark.unit
+    def test_cli_hello_with_debug(self) -> None:
+        """Verify hello command with debug flag.
+
+        Tests that debug flag is properly passed to hello command.
+        """
+        from click.testing import CliRunner
+
+        from my_python_project.cli import cli
+
+        runner = CliRunner()
+        result = runner.invoke(cli, ["--debug", "hello", "--name", "Test"])
+
+        assert result.exit_code == 0
+        assert "Hello, Test!" in result.output
+
+    @pytest.mark.unit
+    def test_cli_config_command(self) -> None:
+        """Verify config command displays configuration.
+
+        Tests that config command outputs project information.
+        """
+        from click.testing import CliRunner
+
+        from my_python_project.cli import cli
+
+        runner = CliRunner()
+        result = runner.invoke(cli, ["config"])
+
+        assert result.exit_code == 0
+        assert "Current Configuration:" in result.output
+        assert "Project: My Python Project" in result.output
+        assert "Version: 0.1.0" in result.output
+        assert "Debug: False" in result.output
+        assert "Log Level:" in result.output
+
+    @pytest.mark.unit
+    def test_cli_config_with_debug(self) -> None:
+        """Verify config command with debug flag.
+
+        Tests that config command shows debug mode when enabled.
+        """
+        from click.testing import CliRunner
+
+        from my_python_project.cli import cli
+
+        runner = CliRunner()
+        result = runner.invoke(cli, ["--debug", "config"])
+
+        assert result.exit_code == 0
+        assert "Current Configuration:" in result.output
+        assert "Debug: True" in result.output
+
+    @pytest.mark.unit
+    def test_cli_context_setup(self) -> None:
+        """Verify CLI context is properly initialized.
+
+        Tests that CLI sets up context object for subcommands.
+        """
+        from click.testing import CliRunner
+
+        from my_python_project.cli import cli
+
+        runner = CliRunner()
+
+        # Invoke CLI group with --help to verify context setup
+        result = runner.invoke(cli, ["--help"])
+
+        # Should show help text successfully
+        assert result.exit_code == 0
+        assert "My Python Project" in result.output
+
+    @pytest.mark.unit
+    def test_cli_debug_mode(self) -> None:
+        """Verify debug mode enables debug logging.
+
+        Tests that --debug flag is processed correctly.
+        """
+        from click.testing import CliRunner
+
+        from my_python_project.cli import cli
+
+        runner = CliRunner()
+        result = runner.invoke(cli, ["--debug", "hello"])
+
+        # Should execute successfully with debug enabled
+        assert result.exit_code == 0
 
 
 class TestExampleIntegration:

@@ -150,7 +150,7 @@ def log_performance(
         ...     duration_ms=42.5,
         ...     success=True,
         ...     image_count=10,
-        ...     output_dir="/results"
+        ...     output_dir="/results",
         ... )
     """
     logger.info(
