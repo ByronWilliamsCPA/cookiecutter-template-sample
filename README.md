@@ -2,6 +2,7 @@
 
 ## Quality & Security
 
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/ByronWilliamsCPA/cookiecutter-template-sample/badge)](https://securityscorecards.dev/viewer/?uri=github.com/ByronWilliamsCPA/cookiecutter-template-sample)
 [![codecov](https://codecov.io/gh/ByronWilliamsCPA/cookiecutter-template-sample/graph/badge.svg)](https://codecov.io/gh/ByronWilliamsCPA/cookiecutter-template-sample)
 
 ## CI/CD Status
@@ -9,6 +10,7 @@
 [![CI Pipeline](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/ci.yml?query=branch%3Amaster)
 [![Security Analysis](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/security-analysis.yml/badge.svg?branch=master)](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/security-analysis.yml?query=branch%3Amaster)
 [![Documentation](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/docs.yml/badge.svg?branch=master)](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/docs.yml?query=branch%3Amaster)
+[![SBOM & Security Scan](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/sbom.yml/badge.svg?branch=master)](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/sbom.yml?query=branch%3Amaster)
 
 ## Project Info
 
