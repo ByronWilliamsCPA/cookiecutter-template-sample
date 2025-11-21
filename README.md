@@ -8,6 +8,7 @@
 
 [![CI Pipeline](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/ci.yml?query=branch%3Amaster)
 [![Security Analysis](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/security-analysis.yml/badge.svg?branch=master)](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/security-analysis.yml?query=branch%3Amaster)
+[![Documentation](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/docs.yml/badge.svg?branch=master)](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/docs.yml?query=branch%3Amaster)
 
 ## Project Info
 
