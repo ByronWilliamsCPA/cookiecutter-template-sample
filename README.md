@@ -1,15 +1,20 @@
 # My Python Project
 
-## Status & Quality
+## Quality & Security
+
+[![codecov](https://codecov.io/gh/ByronWilliamsCPA/cookiecutter-template-sample/graph/badge.svg)](https://codecov.io/gh/ByronWilliamsCPA/cookiecutter-template-sample)
+
+## CI/CD Status
+
+[![CI Pipeline](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/ci.yml?query=branch%3Amaster)
+[![Security Analysis](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/security-analysis.yml/badge.svg?branch=master)](https://github.com/ByronWilliamsCPA/cookiecutter-template-sample/actions/workflows/security-analysis.yml?query=branch%3Amaster)
+
+## Project Info
 
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Code style: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![codecov](https://codecov.io/gh/yourusername/my_python_project/graph/badge.svg)](https://codecov.io/gh/yourusername/my_python_project)
-
-[![CI Pipeline](https://github.com/yourusername/my_python_project/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/my_python_project/actions/workflows/ci.yml)
-[![Security Analysis](https://github.com/yourusername/my_python_project/actions/workflows/security-analysis.yml/badge.svg)](https://github.com/yourusername/my_python_project/actions/workflows/security-analysis.yml)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://github.com/yourusername/.github/blob/main/CODE_OF_CONDUCT.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://github.com/ByronWilliamsCPA/.github/blob/main/CODE_OF_CONDUCT.md)
 
 ---
 
