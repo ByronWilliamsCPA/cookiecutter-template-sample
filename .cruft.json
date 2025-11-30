@@ -1,7 +1,7 @@
 {
-  "template": "/home/byron/dev/cookiecutter-python-template",
+  "template": "https://github.com/ByronWilliamsCPA/cookiecutter-python-template",
   "commit": "6d8445e636adde9b0662c0cdfd0e545de39ae9fa",
-  "checkout": null,
+  "checkout": "main",
   "context": {
     "cookiecutter": {
       "project_name": "My Python Project",
@@ -79,7 +79,7 @@
       "repo_url": "https://github.com/yourusername/my_python_project",
       "docs_url": "https://my_python_project.readthedocs.io",
       "pypi_package_name": "my-python-project",
-      "_template": "/home/byron/dev/cookiecutter-python-template",
+      "_template": "https://github.com/ByronWilliamsCPA/cookiecutter-python-template",
       "_commit": "6d8445e636adde9b0662c0cdfd0e545de39ae9fa"
     }
   },
